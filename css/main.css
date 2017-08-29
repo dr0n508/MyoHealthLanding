@@ -1,0 +1,84 @@
+@import url(normalize.css);
+@import url(../fonts/fonts.css);
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.container {
+  background: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; }
+
+.grid:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+[class*='col-'] {
+  float: left; }
+
+.col-1-2 {
+  width: 50%; }
+
+.col-1-4 {
+  width: 25%; }
+
+[class*='col-'] {
+  padding-right: 10px; }
+
+[class*='col-']:last-of-type {
+  padding-right: 0; }
+
+@media all and (max-width: 768px) {
+  .col-1-2 {
+    width: 100%; }
+
+  .col-1-4 {
+    width: 50%; }
+
+  .col-1-4:nth-child(2n) {
+    padding-right: 0; } }
+.font-lato {
+  font-family: 'Lato', helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal; }
+
+.font-gotham-bold {
+  font-family: 'Gotham', helvetica, sans-serif;
+  font-weight: bold;
+  font-style: normal; }
+
+.font-gotham-book {
+  font-family: 'Gotham Book', helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal; }
+
+.font-gotham-book-italic {
+  font-family: 'Gotham Book', helvetica, sans-serif;
+  font-weight: normal;
+  font-style: italic; }
+
+.font-gotham-medium-italic {
+  font-family: 'Gotham', helvetica, sans-serif;
+  font-weight: 500;
+  font-style: italic; }
+
+.font-gotham-medium {
+  font-family: 'Gotham', helvetica, sans-serif;
+  font-weight: 500;
+  font-style: normal; }
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Gotham Book', helvetica, sans-serif;
+  font-size: 16px; }
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+/*# sourceMappingURL=main.css.map */
