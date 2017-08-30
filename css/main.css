@@ -41,13 +41,8 @@
   padding-right: 0; }
 
 @media all and (max-width: 768px) {
-  .col-1-2, .col-1-3, .col-2-3 {
-    width: 100%; }
-
-  .col-1-4 {
-    width: 50%; }
-
-  .col-1-4:nth-child(2n) {
+  .col-1-2, .col-1-3, .col-2-3, .col-3-4, .col-1-4 {
+    width: 100%;
     padding-right: 0; } }
 .font-lato {
   font-family: 'Lato', helvetica, sans-serif;
@@ -82,7 +77,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Gotham Book', helvetica, sans-serif;
+  font-family: 'Arial', helvetica, sans-serif;
   font-size: 18px; }
 
 div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, td, tr, form, fieldset, label, select, checkbox, input, textarea {
@@ -117,6 +112,12 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
     border-width: 25px 0 25px 15px;
     border-color: transparent transparent transparent #00afef; }
 
+.cta-section, .advantages, .testimonials, .about-us {
+  padding: 50px 0; }
+  @media only screen and (max-width: 768px) {
+    .cta-section, .advantages, .testimonials, .about-us {
+      padding: 25px 0; } }
+
 header {
   padding: 40px 0 15px;
   position: relative;
@@ -138,6 +139,11 @@ header {
     margin-right: 20px; }
     header .call-us .label {
       font-size: 14px; }
+  @media only screen and (max-width: 500px) {
+    header .main-logo img {
+      width: 130px; }
+    header .call-us {
+      font-size: 16px; } }
 
 .welcome-section {
   text-align: center;
@@ -154,7 +160,6 @@ header {
     margin-bottom: 20px; }
 
 .cta-section {
-  padding: 50px 0;
   font-family: 'Gotham', helvetica, sans-serif;
   color: #2b4173;
   background: url("../img/bg-smart.jpg") no-repeat 50% 50%;
@@ -164,8 +169,14 @@ header {
     margin-bottom: 20px;
     font-size: 36px;
     text-transform: uppercase;
-    background: url("http://via.placeholder.com/350x150") no-repeat 100% 50%;
-    background-size: 50px 50px; }
+    background: url("../img/chalenge-bage.jpg") no-repeat 100% 0;
+    background-size: 100px 100px; }
+    @media only screen and (max-width: 768px) {
+      .cta-section .header-cta {
+        text-align: center;
+        font-size: 25px;
+        padding: 110px 0 0 0;
+        background-position: 50% 0; } }
   .cta-section ol {
     padding-left: 20px; }
     .cta-section ol li {
@@ -175,28 +186,91 @@ header {
   .cta-section .offer-price {
     font-weight: 800; }
 
+.wrap-img {
+  text-align: center; }
+  .wrap-img img {
+    max-width: 100%; }
+
 .advantages .list-advantages {
   display: flex;
-  justify-content: space-around; }
+  justify-content: center;
+  flex-wrap: wrap; }
   .advantages .list-advantages li {
+    font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    height: 150px;
+    width: 95px;
+    height: 95px;
     border: solid 1px black;
     border-radius: 50%;
-    text-align: center; }
+    text-align: center;
+    margin: 0 10px 20px 10px; }
+    @media only screen and (max-width: 768px) {
+      .advantages .list-advantages li {
+        font-size: 11px;
+        width: 80px;
+        height: 80px;
+        margin: 0 5px 10px 5px; } }
+.advantages .list {
+  padding-left: 20px;
+  margin: 20px 0; }
+  .advantages .list li:before {
+    content: "-";
+    margin-right: 5px; }
+
+blockquote {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  blockquote p {
+    font-size: 28px;
+    margin-bottom: 20px; }
+  blockquote cite {
+    text-align: right;
+    display: block;
+    font-style: normal; }
+
+.testimonials h2 {
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 20px; }
+.testimonials .wrap-img img {
+  padding: 0 50px;
+  width: 100%; }
+
+.about-us h2 {
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 20px; }
+.about-us img {
+  max-width: 100%; }
+.about-us blockquote cite {
+  text-align: left; }
 
 footer {
-  padding: 0 20px;
+  color: #afaaa8;
+  padding: 50px 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600; }
   footer .footer-menu li {
+    margin-left: 20px;
     display: inline-block; }
     footer .footer-menu li a {
+      color: #afaaa8;
       text-transform: uppercase;
       text-decoration: none; }
+  @media only screen and (max-width: 768px) {
+    footer {
+      flex-direction: column; }
+      footer .copyright {
+        margin-bottom: 15px;
+        text-align: center; }
+      footer .footer-menu li {
+        text-align: center;
+        display: block;
+        margin-left: 0; } }
 
 /*# sourceMappingURL=main.css.map */
