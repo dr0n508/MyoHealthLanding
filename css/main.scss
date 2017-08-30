@@ -42,7 +42,13 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Gotham Book', helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
+}
+
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 * {
@@ -78,6 +84,7 @@ body {
 
 
 header {
+  padding: 40px 0 15px;
   position: relative;
   border-bottom: solid 10px #004376;
   display: flex;
@@ -92,17 +99,61 @@ header {
     display: block;
     background-color: #b2d234;
   }
+  .main-logo {
+    margin-left: 20px;
+  }
+  .call-us {
+    margin-right: 20px;
+    .label {
+      font-size: 14px;
+    }
+  }
 }
 
 .welcome-section {
   text-align: center;
+  padding: 40px 0 20px;
+  font-family: 'Arial', helvetica, sans-serif;
+  h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #2b4173;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
 }
 
 .cta-section {
+  padding: 50px 0;
+  font-family: 'Gotham', helvetica, sans-serif;
+  color: #2b4173;
+  background: url("../img/bg-smart.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  line-height: 1.4;
   .header-cta {
+    margin-bottom: 20px;
+    font-size: 36px;
     text-transform: uppercase;
     background: url("http://via.placeholder.com/350x150") no-repeat 100% 50%;
     background-size: 50px 50px;
+  }
+  ol {
+    padding-left: 20px;
+    li {
+      list-style: decimal;
+    }
+
+  }
+  ol, p {
+    margin-bottom: 20px;
+  }
+  .offer-price {
+    font-weight: 800;
   }
   //ul {
   //  list-style-type: ;
@@ -128,6 +179,7 @@ header {
 
 
 footer {
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
