@@ -2,41 +2,41 @@
 @import "../fonts/fonts.css";
 @import "_grid.scss";
 
-.font-lato {
-  font-family: 'Lato', helvetica, sans-serif;
-  font-weight: normal;
-  font-style: normal;
-}
-
-.font-gotham-bold {
-  font-family: 'Gotham', helvetica, sans-serif;
-  font-weight: bold;
-  font-style: normal;
-}
-
-.font-gotham-book {
-  font-family: 'Gotham Book', helvetica, sans-serif;
-  font-weight: normal;
-  font-style: normal;
-}
-.font-gotham-book-italic {
-  font-family: 'Gotham Book', helvetica, sans-serif;
-  font-weight: normal;
-  font-style: italic;
-}
-
-.font-gotham-medium-italic {
-  font-family: 'Gotham', helvetica, sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.font-gotham-medium {
-  font-family: 'Gotham', helvetica, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-
-}
+//.font-lato {
+//  font-family: 'Lato', helvetica, sans-serif;
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//
+//.font-gotham-bold {
+//  font-family: 'Gotham', helvetica, sans-serif;
+//  font-weight: bold;
+//  font-style: normal;
+//}
+//
+//.font-gotham-book {
+//  font-family: 'Gotham Book', helvetica, sans-serif;
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//.font-gotham-book-italic {
+//  font-family: 'Gotham Book', helvetica, sans-serif;
+//  font-weight: normal;
+//  font-style: italic;
+//}
+//
+//.font-gotham-medium-italic {
+//  font-family: 'Gotham', helvetica, sans-serif;
+//  font-weight: 500;
+//  font-style: italic;
+//}
+//
+//.font-gotham-medium {
+//  font-family: 'Gotham', helvetica, sans-serif;
+//  font-weight: 500;
+//  font-style: normal;
+//
+//}
 
 body {
   padding: 0;
@@ -58,7 +58,7 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
 }
 
 .arrow-button {
-  @extend .font-gotham-bold;
+  //@extend .font-gotham-bold;
   line-height: 50px;
   color: white;
   background-color: #00aeef;
@@ -82,38 +82,18 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
   }
 }
 
-.cta-section, .advantages, .testimonials, .about-us {
-  padding: 50px 0;
-  @media only screen and (max-width: 768px) {
-    padding: 25px 0;
-  }
-}
-
-
 header {
-  padding: 40px 0 15px;
+  padding: 40px 0;
   position: relative;
-  border-bottom: solid 10px #004376;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  &:after {
-    position: absolute;
-    bottom: 0;
-    content: "";
-    width: 100%;
-    height: 5px;
-    display: block;
-    background-color: #b2d234;
-  }
-  .main-logo {
-    margin-left: 20px;
+  border-bottom: solid 7px #b2d235;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .call-us {
-    margin-right: 20px;
-    .label {
-      font-size: 14px;
-    }
+    font-size: 25px;
+    color: #005da4;
   }
   @media only screen and (max-width: 500px) {
     .main-logo img {
@@ -124,6 +104,56 @@ header {
     }
   }
 }
+
+
+
+.welcome-banner {
+  padding: 50px 0;
+  background-color: #005da4;
+  color: white;
+  h1 {
+    text-align: center;
+    font-family: 'Gotham-Black',sans-serif;
+    font-size: 76px;
+    span {
+      display: block;
+      font-family: 'Gotham-Light',sans-serif;
+      font-size: 83px;
+      font-weight: 300;
+    }
+  }
+}
+
+.intro-block {
+  padding: 55px 0;
+  background:  linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9)), url(../img/myo-lines-bg.png) no-repeat 50% 50%;
+  background-size: cover;
+  h2 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 45px;
+    color: #005da4;
+    span {
+      display: block;
+    }
+  }
+  p {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+
+
+.cta-section, .advantages, .testimonials, .about-us {
+  padding: 50px 0;
+  @media only screen and (max-width: 768px) {
+    padding: 25px 0;
+  }
+}
+
+
+
 
 .welcome-section {
   text-align: center;
