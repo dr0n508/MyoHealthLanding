@@ -103,7 +103,8 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
 
 .img {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+  float: left; }
 
 .arrow-button {
   color: white;
@@ -117,6 +118,10 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
   font-size: 28px;
   font-weight: 600;
   text-transform: uppercase; }
+  .arrow-button:hover {
+    background-color: #981b1e; }
+    .arrow-button:hover:after {
+      border-color: transparent transparent transparent #981b1e; }
   .arrow-button:after {
     content: "";
     position: absolute;
@@ -129,18 +134,22 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
     border-width: 30px 0 30px 20px;
     border-color: transparent transparent transparent #b71d21; }
 
+.text-center {
+  text-align: center; }
+
 .gray {
   background-color: #ececec; }
 
 header {
   padding: 40px 0;
   position: relative;
-  border-bottom: solid 7px #b2d235; }
+  border-bottom: solid 8px #b2d235; }
   header .container {
     display: flex;
     justify-content: space-between;
     align-items: center; }
   header .call-us {
+    text-align: right;
     font-size: 25px;
     color: #005da4; }
   @media only screen and (max-width: 500px) {
@@ -150,7 +159,7 @@ header {
       font-size: 16px; } }
 
 .welcome-banner {
-  padding: 50px 0;
+  padding: 40px 0;
   background-color: #005da4;
   color: white; }
   .welcome-banner h1 {
@@ -183,43 +192,45 @@ header {
   .cta img {
     max-width: 100%;
     height: auto; }
-  .cta .header {
-    background: url("../img/icons/30day-chalenge.png") no-repeat 100% 50%;
-    background-size: 104px 120px;
-    padding-right: 120px;
-    text-transform: uppercase;
-    color: #005da4;
-    margin-bottom: 45px; }
-    .cta .header span {
-      font-size: 35px;
-      font-weight: 800;
+
+.offer-wrap .header {
+  background: url("../img/icons/30day-chalenge.png") no-repeat 100% 50%;
+  background-size: 104px 120px;
+  padding-right: 120px;
+  text-transform: uppercase;
+  color: #005da4;
+  margin-bottom: 45px; }
+  .offer-wrap .header span {
+    font-size: 35px;
+    font-weight: 800;
+    display: block; }
+.offer-wrap .content-offer {
+  margin-bottom: 45px; }
+  .offer-wrap .content-offer ol {
+    margin-bottom: 45px;
+    padding-left: 40px; }
+    .offer-wrap .content-offer ol li {
+      list-style-type: decimal;
+      padding-left: 5px;
+      margin-bottom: 20px; }
+.offer-wrap .footer-offer .wrap-pay-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px; }
+  .offer-wrap .footer-offer .wrap-pay-text .arrow-button {
+    flex-shrink: 0;
+    margin-right: 30px; }
+  .offer-wrap .footer-offer .wrap-pay-text p {
+    font-weight: 600;
+    font-size: 32px;
+    color: #005da4; }
+    .offer-wrap .footer-offer .wrap-pay-text p span {
+      font-weight: 400;
+      font-size: 22px;
       display: block; }
-  .cta .content-offer {
-    margin-bottom: 45px; }
-    .cta .content-offer ol {
-      margin-bottom: 45px;
-      padding-left: 40px; }
-      .cta .content-offer ol li {
-        list-style-type: decimal;
-        padding-left: 5px; }
-  .cta .footer-offer .wrap-pay-text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px; }
-    .cta .footer-offer .wrap-pay-text .arrow-button {
-      flex-shrink: 0;
-      margin-right: 30px; }
-    .cta .footer-offer .wrap-pay-text p {
-      font-weight: 600;
-      font-size: 32px;
-      color: #005da4; }
-      .cta .footer-offer .wrap-pay-text p span {
-        font-weight: 400;
-        font-size: 22px;
-        display: block; }
-  .cta .small-text {
-    font-size: 16px; }
+.offer-wrap .footer-offer .small-text {
+  font-size: 16px; }
 
 .icons-block {
   padding: 50px 0; }
@@ -227,6 +238,17 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+
+.decorate-bottom-border {
+  position: relative;
+  border-bottom: solid 5px #ececec; }
+  .decorate-bottom-border:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: -52px;
+    height: 49px;
+    background: url("../img/box-shadow.png") no-repeat 50% 50%; }
 
 .video-section {
   padding: 50px 0; }
@@ -283,7 +305,8 @@ blockquote {
   .advantages .header {
     color: #005da4;
     font-size: 35px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    font-weight: 600; }
   .advantages ul {
     padding-left: 40px; }
     .advantages ul li {
@@ -317,7 +340,7 @@ blockquote {
     font-size: 30px; }
 
 .quote-section {
-  padding: 50px 0; }
+  padding: 100px 0 50px; }
 
 .offer-challenge-section {
   margin-top: 250px;
@@ -344,5 +367,41 @@ blockquote {
     display: block;
     background: url("../img/myo-lines-bg2.png") 50% 50% no-repeat;
     background-size: cover; }
+  .offer-challenge-section ol {
+    margin-bottom: 30px; }
+    .offer-challenge-section ol li {
+      font-size: 35px;
+      list-style-type: decimal;
+      padding-bottom: 30px; }
+  .offer-challenge-section .offer-wrap {
+    margin-top: 50px; }
+  .offer-challenge-section .img {
+    max-width: 90%;
+    margin: 0 auto; }
+
+footer {
+  background-color: #005da4;
+  padding: 25px 0;
+  border-top: solid 8px #b2d235; }
+  footer .container {
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  footer .footer-menu li {
+    display: inline-block;
+    margin-left: 25px; }
+    footer .footer-menu li a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase; }
+  footer .btn-up {
+    border: none;
+    background: none;
+    outline: none;
+    background: url("../img/icons/icon-up.png");
+    width: 40px;
+    height: 38px; }
 
 /*# sourceMappingURL=main.css.map */

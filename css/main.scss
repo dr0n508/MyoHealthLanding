@@ -25,6 +25,7 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
 .img {
   max-width: 100%;
   height: auto;
+  float: left;
 }
 
 .arrow-button {
@@ -39,6 +40,12 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
   font-size: 28px;
   font-weight: 600;
   text-transform: uppercase;
+  &:hover{
+    background-color: #981b1e;
+    &:after {
+      border-color: transparent transparent transparent #981b1e
+    }
+  }
   &:after {
     content: "";
     position: absolute;
@@ -49,11 +56,13 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
     height: 0;
     border-style: solid;
     border-width: 30px 0 30px 20px;
-
     border-color: transparent transparent transparent #b71d21;
   }
 }
 
+.text-center {
+  text-align: center;
+}
 
 .gray {
   background-color: #ececec;
@@ -62,13 +71,14 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
 header {
   padding: 40px 0;
   position: relative;
-  border-bottom: solid 7px #b2d235;
+  border-bottom: solid 8px #b2d235;
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   .call-us {
+    text-align: right;
     font-size: 25px;
     color: #005da4;
   }
@@ -85,7 +95,7 @@ header {
 
 
 .welcome-banner {
-  padding: 50px 0;
+  padding: 40px 0;
   background-color: #005da4;
   color: white;
   h1 {
@@ -127,6 +137,12 @@ header {
     max-width: 100%;
     height: auto;
   }
+
+
+}
+
+
+.offer-wrap {
   .header {
     background: url("../img/icons/30day-chalenge.png") no-repeat 100% 50%;
     background-size: 104px 120px;
@@ -148,6 +164,7 @@ header {
       li {
         list-style-type: decimal;
         padding-left: 5px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -172,9 +189,10 @@ header {
         }
       }
     }
-  }
-  .small-text {
-    font-size: 16px;
+    .small-text {
+      font-size: 16px;
+    }
+
   }
 }
 
@@ -188,6 +206,18 @@ header {
   }
 }
 
+.decorate-bottom-border {
+  position: relative;
+  border-bottom: solid 5px #ececec;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: -52px;
+    height: 49px;
+    background: url("../img/box-shadow.png") no-repeat 50% 50%;
+  }
+}
 
 .video-section {
   padding: 50px 0;
@@ -248,8 +278,8 @@ blockquote {
         height: 26px;
         border-radius: 50%;
         display: inline-block;
-        background-color: #b2d235;      }
-
+        background-color: #b2d235;
+      }
     }
   }
 }
@@ -260,6 +290,7 @@ blockquote {
     color: #005da4;
     font-size: 35px;
     margin-bottom: 30px;
+    font-weight: 600;
   }
   ul {
     padding-left: 40px;
@@ -309,7 +340,7 @@ blockquote {
 
 
 .quote-section {
-  padding: 50px 0;
+  padding: 100px 0 50px;
 }
 
 
@@ -341,6 +372,58 @@ blockquote {
     background-size: cover;
 
   }
+  ol {
+    margin-bottom: 30px;
+    li {
+      font-size: 35px;
+      list-style-type: decimal;
+      padding-bottom: 30px;
+    }
+  }
+  .offer-wrap {
+    margin-top: 50px;
+  }
+  .img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+
+footer {
+  background-color: #005da4;
+  padding: 25px 0;
+  border-top: solid 8px #b2d235;
+  .container {
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .copyright {
+
+  }
+  .footer-menu {
+    li {
+      display: inline-block;
+      margin-left: 25px;
+      a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+
+  }
+  .btn-up {
+    border: none;
+    background: none;
+    outline: none;
+    background: url("../img/icons/icon-up.png");
+    width: 40px;
+    height: 38px;
+  }
 }
 
 
@@ -353,196 +436,14 @@ blockquote {
 
 
 
+@media only screen and (max-width: 992px) {
 
+}
 
+@media only screen and (max-width: 768px) {
 
-//.cta-section, .advantages, .testimonials, .about-us {
-//  padding: 50px 0;
-//  @media only screen and (max-width: 768px) {
-//    padding: 25px 0;
-//  }
-//}
-//
-//
-//
-//
-//.welcome-section {
-//  text-align: center;
-//  padding: 40px 0 20px;
-//  font-family: 'Arial', helvetica, sans-serif;
-//  h1 {
-//    margin-bottom: 20px;
-//    font-size: 32px;
-//    color: #2b4173;
-//  }
-//  h2 {
-//    font-size: 24px;
-//  }
-//  p {
-//    font-size: 22px;
-//    margin-bottom: 20px;
-//  }
-//}
-//
-//.cta-section {
-//  font-family: 'Gotham', helvetica, sans-serif;
-//  color: #2b4173;
-//  background: url("../img/bg-smart.jpg") no-repeat 50% 50%;
-//  background-size: cover;
-//  line-height: 1.4;
-//  .header-cta {
-//    margin-bottom: 20px;
-//    font-size: 36px;
-//    text-transform: uppercase;
-//    background: url("../img/chalenge-bage.jpg") no-repeat 100% 0;
-//    background-size: 100px 100px;
-//    @media only screen and (max-width: 768px) {
-//      text-align: center;
-//      font-size: 25px;
-//      padding: 110px 0 0 0;
-//      background-position: 50% 0;
-//      //background: url("http://via.placeholder.com/350x150") no-repeat 50% 0;
-//      //background-size: 50px 50px;
-//    }
-//  }
-//  ol {
-//    padding-left: 20px;
-//    li {
-//      list-style: decimal;
-//    }
-//
-//  }
-//  ol, p {
-//    margin-bottom: 20px;
-//  }
-//  .offer-price {
-//    font-weight: 800;
-//  }
-//  //ul {
-//  //  list-style-type: ;
-//  //}
-//}
-//
-//.wrap-img {
-//  text-align: center;
-//  img {
-//    max-width: 100%;
-//  }
-//}
-//
-//.advantages {
-//  .list-advantages {
-//    display: flex;
-//    justify-content: center;
-//    flex-wrap: wrap;
-//    li {
-//      font-size: 12px;
-//      display: flex;
-//      align-items: center;
-//      justify-content: center;
-//      width: 95px;
-//      height: 95px;
-//      border: solid 1px black;
-//      border-radius: 50%;
-//      text-align: center;
-//      margin: 0 10px 20px 10px;
-//      @media only screen and (max-width: 768px) {
-//        font-size: 11px;
-//        width: 80px;
-//        height: 80px;
-//        margin: 0 5px 10px 5px;
-//
-//      }
-//    }
-//  }
-//  .list {
-//    padding-left: 20px;
-//    margin: 20px 0;
-//    li {
-//     &:before {
-//       content: "-";
-//       margin-right: 5px;
-//     }
-//    }
-//
-//  }
-//}
-//
-//
-//
-//.testimonials {
-//  h2 {
-//    font-weight: 400;
-//    font-size: 30px;
-//    margin-bottom: 20px;
-//  }
-//  .wrap-img img {
-//    padding: 0 50px;
-//    width: 100%;
-//  }
-//}
-//
-//.about-us {
-//  h2 {
-//    font-weight: 400;
-//    font-size: 30px;
-//    margin-bottom: 20px;
-//  }
-//  img {
-//    max-width: 100%;
-//  }
-//  blockquote {
-//    cite {
-//      text-align: left;
-//    }
-//  }
-//}
-//
-//
-//footer {
-//  color: #afaaa8;
-//  padding: 50px 20px;
-//  display: flex;
-//  justify-content: space-between;
-//  align-items: center;
-//  font-size: 14px;
-//  font-weight: 600;
-//  .footer-menu {
-//    li {
-//      margin-left: 20px;
-//      display: inline-block;
-//      a {
-//        color: #afaaa8;
-//        text-transform: uppercase;
-//        text-decoration: none;
-//      }
-//    }
-//  }
-//  @media only screen and (max-width: 768px) {
-//    flex-direction: column;
-//    .copyright {
-//      margin-bottom: 15px;
-//      text-align: center;
-//    }
-//    .footer-menu {
-//      li {
-//        text-align: center;
-//        display: block;
-//        margin-left: 0;
-//      }
-//    }
-//
-//  }
-//}
-//
-//@media only screen and (max-width: 992px) {
-//
-//}
-//
-//@media only screen and (max-width: 768px) {
-//
-//}
-//
-//@media only screen and (max-width: 450px) {
-//
-//}
+}
+
+@media only screen and (max-width: 450px) {
+
+}
