@@ -1,6 +1,8 @@
 @import "normalize.css";
 @import "../fonts/fonts.css";
 @import "_grid.scss";
+@import "_video.scss";
+
 
 //.font-lato {
 //  font-family: 'Lato', helvetica, sans-serif;
@@ -42,7 +44,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Arial', helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
@@ -58,27 +60,29 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
 }
 
 .arrow-button {
-  //@extend .font-gotham-bold;
-  line-height: 50px;
   color: white;
-  background-color: #00aeef;
+  background-color: #b71d21;
   position: relative;
-  height: 50px;
+  height: 60px;
+  line-height: 60px;
   display: inline-block;
   text-decoration: none;
   padding: 0 15px;
-  font-size: 18px;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
   &:after {
     content: "";
     position: absolute;
-    right: -15px;
+    right: -20px;
     top:0;
     display: inline-block;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 25px 0 25px 15px;
-    border-color: transparent transparent transparent #00afef;
+    border-width: 30px 0 30px 20px;
+
+    border-color: transparent transparent transparent #b71d21;
   }
 }
 
@@ -141,6 +145,79 @@ header {
     font-size: 30px;
     text-align: center;
   }
+}
+
+
+.cta {
+  padding: 50px 0;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .header {
+    background: url("../img/icons/30day-chalenge.png") no-repeat 100% 50%;
+    background-size: 104px 120px;
+    padding-right: 120px;
+    text-transform: uppercase;
+    color: #005da4;
+    margin-bottom: 45px;
+    span {
+      font-size: 35px;
+      font-weight: 800;
+      display: block;
+    }
+  }
+  .content-offer {
+    margin-bottom: 45px;
+    ol {
+      margin-bottom: 45px;
+      padding-left: 40px;
+      li {
+        list-style-type: decimal;
+        padding-left: 5px;
+      }
+    }
+  }
+  .footer-offer {
+    .wrap-pay-text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      .arrow-button {
+        flex-shrink: 0;
+        margin-right: 30px;
+      }
+      p {
+        font-weight: 600;
+        font-size: 32px;
+        color: #005da4;
+        span {
+          font-weight: 400;
+          font-size: 22px;
+          display: block;
+        }
+      }
+    }
+  }
+  .small-text {
+    font-size: 16px;
+  }
+}
+
+.icons-block {
+  padding: 50px 0;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+}
+
+
+.video-section {
+  padding: 50px 0;
 }
 
 

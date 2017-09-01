@@ -35,7 +35,7 @@
   width: 75%; }
 
 [class*='col-'] {
-  padding-right: 10px; }
+  padding-right: 20px; }
 
 [class*='col-']:last-of-type {
   padding-right: 0; }
@@ -44,11 +44,52 @@
   .col-1-2, .col-1-3, .col-2-3, .col-3-4, .col-1-4 {
     width: 100%;
     padding-right: 0; } }
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0; }
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.button-play-video {
+  content: "";
+  cursor: pointer;
+  position: absolute;
+  background-image: url("../img/icons/icon-play.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 131px;
+  height: 131px;
+  margin-top: -65px;
+  margin-right: -65px;
+  top: 50%;
+  right: 50%;
+  z-index: 2; }
+
+.overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1; }
+
+.video {
+  position: relative;
+  overflow: hidden; }
+
 body {
   padding: 0;
   margin: 0;
   font-family: 'Arial', helvetica, sans-serif;
-  font-size: 18px; }
+  font-size: 25px; }
 
 div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, td, tr, form, fieldset, label, select, checkbox, input, textarea {
   padding: 0;
@@ -61,26 +102,28 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
   -moz-box-sizing: border-box; }
 
 .arrow-button {
-  line-height: 50px;
   color: white;
-  background-color: #00aeef;
+  background-color: #b71d21;
   position: relative;
-  height: 50px;
+  height: 60px;
+  line-height: 60px;
   display: inline-block;
   text-decoration: none;
   padding: 0 15px;
-  font-size: 18px; }
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase; }
   .arrow-button:after {
     content: "";
     position: absolute;
-    right: -15px;
+    right: -20px;
     top: 0;
     display: inline-block;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 25px 0 25px 15px;
-    border-color: transparent transparent transparent #00afef; }
+    border-width: 30px 0 30px 20px;
+    border-color: transparent transparent transparent #b71d21; }
 
 header {
   padding: 40px 0;
@@ -127,6 +170,59 @@ header {
   .intro-block p {
     font-size: 30px;
     text-align: center; }
+
+.cta {
+  padding: 50px 0; }
+  .cta img {
+    max-width: 100%;
+    height: auto; }
+  .cta .header {
+    background: url("../img/icons/30day-chalenge.png") no-repeat 100% 50%;
+    background-size: 104px 120px;
+    padding-right: 120px;
+    text-transform: uppercase;
+    color: #005da4;
+    margin-bottom: 45px; }
+    .cta .header span {
+      font-size: 35px;
+      font-weight: 800;
+      display: block; }
+  .cta .content-offer {
+    margin-bottom: 45px; }
+    .cta .content-offer ol {
+      margin-bottom: 45px;
+      padding-left: 40px; }
+      .cta .content-offer ol li {
+        list-style-type: decimal;
+        padding-left: 5px; }
+  .cta .footer-offer .wrap-pay-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px; }
+    .cta .footer-offer .wrap-pay-text .arrow-button {
+      flex-shrink: 0;
+      margin-right: 30px; }
+    .cta .footer-offer .wrap-pay-text p {
+      font-weight: 600;
+      font-size: 32px;
+      color: #005da4; }
+      .cta .footer-offer .wrap-pay-text p span {
+        font-weight: 400;
+        font-size: 22px;
+        display: block; }
+  .cta .small-text {
+    font-size: 16px; }
+
+.icons-block {
+  padding: 50px 0; }
+  .icons-block ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+
+.video-section {
+  padding: 50px 0; }
 
 .cta-section, .advantages, .testimonials, .about-us {
   padding: 50px 0; }

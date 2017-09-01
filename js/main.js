@@ -1,4 +1,24 @@
 $(document).ready(function () {
 
+    // vimeo video api
+
+    var iframe = $('#video-robert-wolf');
+    var player = new Vimeo.Player(iframe);
+
+    $('#play-pause').click(function() {
+        player.play();
+        $(this).toggleClass('play');
+        if ($(this).hasClass('play')) {
+            //pause video
+            player.pause();
+        } else {
+            //unpause video
+            player.play();
+            $(this).siblings(".overlay").hide();
+            $(this).hide();
+        }
+    });
+
+
 
 });
