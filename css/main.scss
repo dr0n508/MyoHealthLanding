@@ -374,6 +374,7 @@ blockquote {
   }
   ol {
     margin-bottom: 30px;
+    padding-left: 20px;
     li {
       font-size: 35px;
       list-style-type: decimal;
@@ -392,7 +393,7 @@ blockquote {
 
 footer {
   background-color: #005da4;
-  padding: 25px 0;
+  padding: 30px 0;
   border-top: solid 8px #b2d235;
   .container {
     font-size: 18px;
@@ -417,12 +418,23 @@ footer {
 
   }
   .btn-up {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -28px;
+    margin-top: -32px;
+    box-sizing: content-box;
     border: none;
-    background: none;
     outline: none;
-    background: url("../img/icons/icon-up.png");
+    background: url("../img/icons/icon-up.png") no-repeat 50% 45%;
     width: 40px;
     height: 38px;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+      background: url("../img/icons/icon-up.png") no-repeat 50% 45%, rgba(0,0,0,.2);
+    }
   }
 }
 
@@ -433,7 +445,27 @@ footer {
 
 
 
-
+@media only screen and (max-width: 1200px) {
+  header {
+    padding: 20px 0;
+    .main-logo img {
+      width: 200px;
+      height: auto;
+    }
+    .call-us {
+      font-size: 20px;
+    }
+  }
+  .welcome-banner {
+    padding: 20px 0;
+    h1 {
+      font-size: 58px;
+      span {
+        font-size: 64px;
+      }
+    }
+  }
+}
 
 
 @media only screen and (max-width: 992px) {

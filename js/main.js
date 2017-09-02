@@ -35,16 +35,10 @@ $(document).ready(function () {
         $list.css("height", height);
     }
 
-
-    $(function() {
-
-        $('#btn-up').click(function() {
-            $('html, body').animate({scrollTop: 0},500);
-            return false;
-        })
-
+    $('#btn-up').click(function() {
+        $('html, body').animate({scrollTop: 0},500);
+        return false;
     })
-
 
 
 });
