@@ -65,6 +65,7 @@
   background-image: url("../img/icons/icon-play.png");
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-size: cover;
   width: 131px;
   height: 131px;
   margin-top: -65px;
@@ -72,6 +73,12 @@
   top: 50%;
   right: 50%;
   z-index: 2; }
+  @media only screen and (max-width: 992px) {
+    .button-play-video {
+      width: 80px;
+      height: 80px;
+      margin-top: -40px;
+      margin-right: -40px; } }
 
 .overlay {
   content: "";
@@ -503,6 +510,8 @@ footer {
       color: white;
       text-decoration: none;
       text-transform: uppercase; }
+      footer .footer-menu li a:hover {
+        text-decoration: underline; }
   footer .btn-up {
     position: absolute;
     top: 50%;
