@@ -43,7 +43,8 @@
 @media all and (max-width: 768px) {
   .col-1-2, .col-1-3, .col-2-3, .col-3-4, .col-1-4 {
     width: 100%;
-    padding-right: 0; } }
+    padding-right: 0;
+    margin-bottom: 20px; } }
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -89,7 +90,14 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Arial', helvetica, sans-serif;
-  font-size: 25px; }
+  font-size: 25px;
+  line-height: 1.25; }
+  @media only screen and (max-width: 1200px) {
+    body {
+      font-size: 18px; } }
+  @media only screen and (max-width: 992px) {
+    body {
+      font-size: 16px; } }
 
 div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, td, tr, form, fieldset, label, select, checkbox, input, textarea {
   padding: 0;
@@ -100,6 +108,13 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box; }
+
+@media only screen and (max-width: 768px) {
+  .img-block {
+    text-align: center; }
+    .img-block .img {
+      max-width: 280px;
+      float: none; } }
 
 .img {
   max-width: 100%;
@@ -115,7 +130,7 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
   display: inline-block;
   text-decoration: none;
   padding: 0 15px;
-  font-size: 28px;
+  font-size: 1.12em;
   font-weight: 600;
   text-transform: uppercase; }
   .arrow-button:hover {
@@ -150,13 +165,20 @@ header {
     align-items: center; }
   header .call-us {
     text-align: right;
-    font-size: 25px;
+    font-size: 1em;
     color: #005da4; }
+  @media only screen and (max-width: 1200px) {
+    header .main-logo img {
+      width: 300px; } }
+  @media only screen and (max-width: 992px) {
+    header .main-logo img {
+      width: 220px; } }
   @media only screen and (max-width: 500px) {
     header .main-logo img {
-      width: 130px; }
-    header .call-us {
-      font-size: 16px; } }
+      width: 130px; } }
+  @media only screen and (max-width: 768px) {
+    header {
+      padding: 20px 0; } }
 
 .welcome-banner {
   padding: 40px 0;
@@ -165,33 +187,41 @@ header {
   .welcome-banner h1 {
     text-align: center;
     font-family: 'Gotham-Black',sans-serif;
-    font-size: 76px; }
+    font-size: 3.04em; }
     .welcome-banner h1 span {
       display: block;
       font-family: 'Gotham-Light',sans-serif;
-      font-size: 83px;
+      font-size: 1.1em;
       font-weight: 300; }
+    @media only screen and (max-width: 768px) {
+      .welcome-banner h1 {
+        font-size: 32px; } }
+
+.intro-block, .cta, .icons-block, .video-section, .ten-reasons, .advantages, .testimonials {
+  padding: 50px 0; }
+  @media only screen and (max-width: 992px) {
+    .intro-block, .cta, .icons-block, .video-section, .ten-reasons, .advantages, .testimonials {
+      padding: 30px 0; } }
 
 .intro-block {
-  padding: 55px 0;
   background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9)), url(../img/myo-lines-bg.png) no-repeat 50% 50%;
   background-size: cover; }
   .intro-block h2 {
-    font-size: 35px;
+    font-size: 1.4em;
     text-align: center;
     margin-bottom: 45px;
     color: #005da4; }
+    @media only screen and (max-width: 1200px) {
+      .intro-block h2 {
+        margin-bottom: 30px; } }
+    @media only screen and (max-width: 992px) {
+      .intro-block h2 {
+        margin-bottom: 20px; } }
     .intro-block h2 span {
       display: block; }
   .intro-block p {
-    font-size: 30px;
+    font-size: 1.2em;
     text-align: center; }
-
-.cta {
-  padding: 50px 0; }
-  .cta img {
-    max-width: 100%;
-    height: auto; }
 
 .offer-wrap .header {
   background: url("../img/icons/30day-chalenge.png") no-repeat 100% 50%;
@@ -200,8 +230,15 @@ header {
   text-transform: uppercase;
   color: #005da4;
   margin-bottom: 45px; }
+  @media only screen and (max-width: 1200px) {
+    .offer-wrap .header {
+      background-size: 78px 90px; } }
+  @media only screen and (max-width: 992px) {
+    .offer-wrap .header {
+      background-size: 69px 80px; } }
+  .offer-wrap .header h2 {
+    font-size: 1.4em; }
   .offer-wrap .header span {
-    font-size: 35px;
     font-weight: 800;
     display: block; }
 .offer-wrap .content-offer {
@@ -213,6 +250,9 @@ header {
       list-style-type: decimal;
       padding-left: 5px;
       margin-bottom: 20px; }
+  @media only screen and (max-width: 768px) {
+    .offer-wrap .content-offer ol {
+      padding-left: 20px; } }
 .offer-wrap .footer-offer .wrap-pay-text {
   display: flex;
   align-items: center;
@@ -223,21 +263,30 @@ header {
     margin-right: 30px; }
   .offer-wrap .footer-offer .wrap-pay-text p {
     font-weight: 600;
-    font-size: 32px;
+    font-size: 1.28em;
     color: #005da4; }
     .offer-wrap .footer-offer .wrap-pay-text p span {
       font-weight: 400;
-      font-size: 22px;
+      font-size: .687em;
       display: block; }
+  @media only screen and (max-width: 500px) {
+    .offer-wrap .footer-offer .wrap-pay-text {
+      flex-direction: column;
+      align-items: flex-start; }
+      .offer-wrap .footer-offer .wrap-pay-text .arrow-button {
+        margin-bottom: 10px; } }
 .offer-wrap .footer-offer .small-text {
-  font-size: 16px; }
+  font-size: .64em; }
 
-.icons-block {
-  padding: 50px 0; }
-  .icons-block ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
+.icons-block ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .icons-block ul li {
+    flex-grow: 1;
+    padding: 10px;
+    text-align: center; }
 
 .decorate-bottom-border {
   position: relative;
@@ -250,94 +299,101 @@ header {
     height: 49px;
     background: url("../img/box-shadow.png") no-repeat 50% 50%; }
 
-.video-section {
-  padding: 50px 0; }
-
 blockquote {
   color: #acacac;
   margin: 0 20px; }
   blockquote p {
-    font-size: 53px;
+    font-size: 2.12em;
     font-style: italic;
     font-weight: 600;
     margin-bottom: 20px; }
   blockquote cite {
-    font-size: 30px;
+    font-size: 1.2em;
     display: block;
     font-style: normal; }
+  @media only screen and (max-width: 992px) {
+    blockquote p {
+      font-size: 28px; } }
+  @media only screen and (max-width: 768px) {
+    blockquote {
+      margin: 20px 0; } }
 
 .color-header h2 {
   text-align: center;
-  font-size: 44px;
+  font-size: 1.76em;
   text-transform: uppercase;
   font-weight: 800;
   color: #b2d235; }
 .color-header .sub-header {
   text-align: center;
-  font-size: 60px;
+  font-size: 2.4em;
   color: #005da4;
   margin-bottom: 40px; }
 
-.ten-reasons {
-  padding: 50px 0; }
-  .ten-reasons ol li {
-    font-size: 35px;
-    color: #005da4;
-    position: relative;
-    padding-left: 35px; }
-    .ten-reasons ol li span {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      margin-top: -13px;
-      line-height: 26px;
-      text-align: center;
-      color: white;
-      font-size: 20px;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      display: inline-block;
-      background-color: #b2d235; }
+.ten-reasons ol li {
+  font-size: 1.4em;
+  color: #005da4;
+  position: relative;
+  padding-left: 35px; }
+  @media only screen and (max-width: 1200px) {
+    .ten-reasons ol li {
+      margin-bottom: 10px; } }
+  .ten-reasons ol li span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -13px;
+    line-height: 26px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #b2d235; }
+@media only screen and (max-width: 768px) {
+  .ten-reasons .col-1-2 {
+    margin-bottom: 0; } }
 
-.advantages {
-  padding: 50px 0; }
-  .advantages .header {
-    color: #005da4;
-    font-size: 35px;
-    margin-bottom: 30px;
-    font-weight: 600; }
-  .advantages ul {
-    padding-left: 40px; }
-    .advantages ul li {
-      font-size: 30px;
-      list-style: disc; }
+.advantages .header {
+  color: #005da4;
+  font-size: 1.4em;
+  margin-bottom: 30px;
+  font-weight: 600; }
+.advantages ul {
+  padding-left: 40px; }
+  .advantages ul li {
+    font-size: 1.2em;
+    list-style: disc; }
+    @media only screen and (max-width: 1200px) {
+      .advantages ul li {
+        margin-bottom: 5px; } }
 
-.testimonials {
-  padding: 50px 0; }
-  .testimonials .grid {
-    margin-bottom: 20px; }
-  .testimonials blockquote {
-    background-color: #eceded;
-    margin: 0;
-    padding: 20px;
-    text-align: center; }
-    .testimonials blockquote p {
-      font-size: 40px;
-      color: black;
-      font-weight: normal; }
-    .testimonials blockquote cite {
-      font-size: 30px;
-      color: black; }
+.testimonials .grid {
+  margin-bottom: 20px; }
+.testimonials blockquote {
+  background-color: #eceded;
+  margin: 0;
+  padding: 20px;
+  text-align: center; }
+  .testimonials blockquote p {
+    font-size: 1.6em;
+    color: black;
+    font-weight: normal; }
+  .testimonials blockquote cite {
+    font-size: 1.2em;
+    color: black; }
 
 .nasa-section {
   padding-top: 50px; }
   .nasa-section h2 {
-    font-size: 35px;
+    font-size: 1.4em;
     color: #005da4;
     margin: 30px 0; }
   .nasa-section p {
-    font-size: 30px; }
+    font-size: 1.2em;
+    margin-bottom: 20px; }
 
 .quote-section {
   padding: 100px 0 50px; }
@@ -369,9 +425,9 @@ blockquote {
     background-size: cover; }
   .offer-challenge-section ol {
     margin-bottom: 30px;
-    padding-left: 20px; }
+    padding-left: 30px; }
     .offer-challenge-section ol li {
-      font-size: 35px;
+      font-size: 1.4em;
       list-style-type: decimal;
       padding-bottom: 30px; }
   .offer-challenge-section .offer-wrap {
@@ -379,13 +435,38 @@ blockquote {
   .offer-challenge-section .img {
     max-width: 90%;
     margin: 0 auto; }
+  @media only screen and (max-width: 1200px) {
+    .offer-challenge-section {
+      margin-top: 200px; }
+      .offer-challenge-section:after {
+        margin-bottom: 5px;
+        width: 180px;
+        height: 208px;
+        top: -150px; } }
+  @media only screen and (max-width: 992px) {
+    .offer-challenge-section {
+      margin-top: 150px; } }
+  @media only screen and (max-width: 768px) {
+    .offer-challenge-section {
+      margin-top: 40px;
+      padding: 70px 0 25px; }
+      .offer-challenge-section:after {
+        margin-bottom: 5px;
+        width: 103px;
+        height: 120px;
+        top: -85px; }
+      .offer-challenge-section:before {
+        height: 100px;
+        top: -105px; }
+      .offer-challenge-section .offer-wrap {
+        margin-top: 0; } }
 
 footer {
   background-color: #005da4;
   padding: 30px 0;
   border-top: solid 8px #b2d235; }
   footer .container {
-    font-size: 18px;
+    font-size: .72em;
     color: white;
     display: flex;
     align-items: center;
@@ -414,21 +495,5 @@ footer {
     cursor: pointer; }
     footer .btn-up:hover {
       background: url("../img/icons/icon-up.png") no-repeat 50% 45%, rgba(0, 0, 0, 0.2); }
-
-@media only screen and (max-width: 1200px) {
-  header {
-    padding: 20px 0; }
-    header .main-logo img {
-      width: 200px;
-      height: auto; }
-    header .call-us {
-      font-size: 20px; }
-
-  .welcome-banner {
-    padding: 20px 0; }
-    .welcome-banner h1 {
-      font-size: 58px; }
-      .welcome-banner h1 span {
-        font-size: 64px; } }
 
 /*# sourceMappingURL=main.css.map */
