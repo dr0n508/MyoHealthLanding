@@ -3,20 +3,6 @@
 @import "_grid.scss";
 @import "_video.scss";
 
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Arial', helvetica, sans-serif;
-  font-size: 25px;
-  line-height: 1.25;
-  @media only screen and (max-width: 1200px) {
-    font-size: 18px;
-  }
-  @media only screen and (max-width: 992px) {
-    font-size: 16px;
-  }
-}
-
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
   padding: 0;
   margin: 0;
@@ -29,8 +15,23 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
   -moz-box-sizing: border-box;
 }
 
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Arial', helvetica, sans-serif;
+  font-size: 25px;
+  line-height: 1.25;
+  @media only screen and (max-width: 1200px) { font-size: 18px; }
+  @media only screen and (max-width: 992px) { font-size: 16px; }
+}
 
+//base
 .img-block {
+  .img {
+    max-width: 100%;
+    height: auto;
+    float: left;
+  }
   @media only screen and (max-width: 768px) {
     text-align: center;
     .img {
@@ -38,13 +39,6 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
       float: none;
     }
   }
-}
-
-
-.img {
-  max-width: 100%;
-  height: auto;
-  float: left;
 }
 
 .arrow-button {
@@ -87,6 +81,14 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
   background-color: #ececec;
 }
 
+//content
+.intro-block, .cta, .video-section, .ten-reasons, .advantages, .testimonials  {
+  padding: 50px 0;
+  @media only screen and (max-width: 992px) {
+    padding: 30px 0;
+  }
+}
+
 header {
   padding: 40px 0;
   position: relative;
@@ -107,8 +109,6 @@ header {
   @media only screen and (max-width: 768px) { padding: 20px 0; }
 }
 
-
-
 .welcome-banner {
   padding: 40px 0;
   background-color: #005da4;
@@ -123,21 +123,9 @@ header {
       font-size: 1.1em;
       font-weight: 300;
     }
-    @media only screen and (max-width: 768px) {
-      font-size: 32px;
-    }
+    @media only screen and (max-width: 768px) { font-size: 32px; }
   }
 }
-
-
-
-.intro-block, .cta, .icons-block, .video-section, .ten-reasons, .advantages, .testimonials  {
-  padding: 50px 0;
-  @media only screen and (max-width: 992px) {
-    padding: 30px 0;
-  }
-}
-
 
 .intro-block {
   background:  linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9)), url(../img/myo-lines-bg.png) no-repeat 50% 50%;
@@ -147,20 +135,11 @@ header {
     text-align: center;
     margin-bottom: 45px;
     color: #005da4;
-    @media only screen and (max-width: 1200px) {
-      margin-bottom: 30px;
-    }
-    @media only screen and (max-width: 992px) {
-      margin-bottom: 20px;
-    }
-    span {
-      display: block;
-    }
+    span { display: block; }
+    @media only screen and (max-width: 1200px) {  margin-bottom: 30px; }
+    @media only screen and (max-width: 992px) {  margin-bottom: 20px; }
   }
-  p {
-    font-size: 1.2em;
-    text-align: center;
-  }
+  p { font-size: 1.2em;  text-align: center; }
 }
 
 .offer-wrap {
@@ -170,36 +149,25 @@ header {
     padding-right: 120px;
     text-transform: uppercase;
     color: #005da4;
-    margin-bottom: 45px;
-    @media only screen and (max-width: 1200px) {
-      background-size: 78px 90px;
-    }
-    @media only screen and (max-width: 992px) {
-      background-size: 69px 80px;
-    }
-    h2 {
-      font-size: 1.4em;
-    }
-    span {
-      font-weight: 800;
-      display: block;
-    }
+    margin-bottom: 30px;
+    h2 { font-size: 1.4em; }
+    span { font-weight: 800; display: block; }
+    @media only screen and (max-width: 1200px) { background-size: 78px 90px; }
+    @media only screen and (max-width: 992px) { background-size: 69px 80px; }
   }
   .content-offer {
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     ol {
-      margin-bottom: 45px;
+      margin-bottom: 25px;
       padding-left: 40px;
       li {
         list-style-type: decimal;
         padding-left: 5px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
     }
     @media only screen and (max-width: 768px) {
-      ol {
-        padding-left: 20px;
-      }
+      ol { padding-left: 20px; }
     }
   }
   .footer-offer {
@@ -225,64 +193,38 @@ header {
       @media only screen and (max-width: 500px) {
         flex-direction: column;
         align-items: flex-start;
-        .arrow-button {
-          margin-bottom: 10px;
-        }
-
+        .arrow-button { margin-bottom: 10px; }
       }
     }
-    .small-text {
-      font-size: .64em;
-    }
-
-
+    .small-text { font-size: .64em; }
   }
 }
 
 .icons-block {
+  padding: 30px 0;
   ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     li {
+      width: 16.66%;
       flex-grow: 1;
-      padding: 10px;
+      padding: 10px 10px 0 10px;
       text-align: center;
-
-      img {
-        //width: 100%;
-        //height: auto;
-      }
     }
-
-
-
-
   }
-  //@media only screen and (max-width: 992px) {
-  //  ul {
-  //    justify-content: center;
-  //    li {
-  //      padding: 0 10px 10px 10px;
-  //      img {
-  //        width: 90px;
-  //        height: 90px;
-  //      }
-  //      .gmo {
-  //        width: 102px;
-  //        height: 90px;
-  //      }
-  //    }
-  //  }
-  //}
-  //@media only screen and (max-width: 992px) {
-  //  ul li {
-  //    padding: 0 5px 5px 5px;
-  //    img { width: 80px; height: 80px}
-  //    .gmo { width: 91px; height: 80px}
-  //  }
-  //}
+  @media only screen and (max-width: 1200px) { img { max-height: 130px; width: auto; } }
+  @media only screen and (max-width: 992px) { ul li img { max-height: 95px; width: auto; } }
+  @media only screen and (max-width: 768px) {
+    padding: 0;
+    ul li img { max-height: 60px; width: auto; } }
+  @media only screen and (max-width: 500px) {
+    ul li  {
+      width: 33.33%;
+      img { max-height: 65px; width: auto; }
+    }
+  }
 }
 
 .decorate-bottom-border {
@@ -298,8 +240,6 @@ header {
   }
 }
 
-
-
 blockquote {
   color: #acacac;
   margin: 0 20px;
@@ -308,8 +248,6 @@ blockquote {
     font-style: italic;
     font-weight: 600;
     margin-bottom: 20px;
-
-
   }
   cite {
     font-size: 1.2em;
@@ -317,13 +255,9 @@ blockquote {
     font-style: normal;
   }
   @media only screen and (max-width: 992px) {
-    p {
-      font-size: 28px;
-    }
+    p { font-size: 28px; }
   }
-  @media only screen and (max-width: 768px) {
-    margin: 20px 0;
-  }
+  @media only screen and (max-width: 768px) { margin: 20px 0; }
 }
 
 .color-header {
@@ -370,9 +304,7 @@ blockquote {
     }
   }
   @media only screen and (max-width: 768px) {
-    .col-1-2 {
-      margin-bottom: 0;
-    }
+    .col-1-2 { margin-bottom: 0; }
   }
 }
 
@@ -388,9 +320,7 @@ blockquote {
     li {
       font-size: 1.2em;
       list-style: disc;
-      @media only screen and (max-width: 1200px) {
-        margin-bottom: 5px;
-      }
+      @media only screen and (max-width: 1200px) { margin-bottom: 5px; }
     }
   }
 
@@ -398,9 +328,7 @@ blockquote {
 
 
 .testimonials {
-  .grid {
-    margin-bottom: 20px;
-  }
+  .grid { margin-bottom: 20px; }
   blockquote {
     background-color: #eceded;
     margin: 0;
@@ -429,14 +357,12 @@ blockquote {
     font-size: 1.2em;
     margin-bottom: 20px;
   }
-
 }
 
 
 .quote-section {
   padding: 100px 0 50px;
 }
-
 
 .offer-challenge-section {
   margin-top: 250px;
@@ -474,12 +400,10 @@ blockquote {
       padding-bottom: 30px;
     }
   }
-  .offer-wrap {
-    margin-top: 50px;
-  }
-  .img {
-    max-width: 90%;
-    margin: 0 auto;
+  .offer-wrap { margin-top: 50px; }
+  .img-block img {
+    max-width: 80%;
+    float: right;
   }
   @media only screen and (max-width: 1200px) {
     margin-top: 200px;
@@ -489,11 +413,8 @@ blockquote {
       height: 208px;
       top: -150px;
     }
-
   }
-  @media only screen and (max-width: 992px) {
-    margin-top: 150px;
-  }
+  @media only screen and (max-width: 992px) { margin-top: 150px; }
   @media only screen and (max-width: 768px) {
     margin-top: 40px;
     padding: 70px 0 25px;
@@ -507,12 +428,13 @@ blockquote {
       height: 100px;
       top: -105px;
     }
-    .offer-wrap {
-      margin-top: 0;
+    .offer-wrap { margin-top: 0; }
+    .img-block img {
+      max-width: 280px;
+      float: none;
     }
   }
 }
-
 
 footer {
   background-color: #005da4;
@@ -525,9 +447,6 @@ footer {
     align-items: center;
     justify-content: space-between;
   }
-  .copyright {
-
-  }
   .footer-menu {
     li {
       display: inline-block;
@@ -538,7 +457,6 @@ footer {
         text-transform: uppercase;
       }
     }
-
   }
   .btn-up {
     position: absolute;
@@ -559,46 +477,19 @@ footer {
       background: url("../img/icons/icon-up.png") no-repeat 50% 45%, rgba(0,0,0,.2);
     }
   }
-}
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 1200px) {
-  //header {
-  //  padding: 20px 0;
-  //  .main-logo img {
-  //    width: 200px;
-  //    height: auto;
-  //  }
-  //  .call-us {
-  //    font-size: 20px;
-  //  }
-  //}
-  //.welcome-banner {
-  //  padding: 20px 0;
-  //  h1 {
-  //    font-size: 58px;
-  //    span {
-  //      font-size: 64px;
-  //    }
-  //  }
-  //}
-}
-
-
-@media only screen and (max-width: 992px) {
-
-}
-
-@media only screen and (max-width: 768px) {
-
-}
-
-@media only screen and (max-width: 450px) {
-
+  @media only screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      font-size: 14px;
+    }
+    .copyright { margin-bottom: 20px; }
+    .footer-menu {
+      text-align: center;
+      li {
+        display: block;
+        margin-left: 0;
+      }
+    }
+    .btn-up { display: none; }
+  }
 }
